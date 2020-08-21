@@ -1,0 +1,13 @@
+*{
+   
+}
+
+html,body{
+    height: 100%;;
+}
+
+html{
+    background-image: url('./assets/img/background.svg');
+    background-size: cover;
+    overflow-y: auto !important;
+}

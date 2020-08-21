@@ -1,0 +1,101 @@
+@import '../../main-style.scss';
+
+.navbar{
+    //to make header at the center
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+ 
+    .header{
+        
+        h1{
+            font-size: 30px;
+            font-weight: 800;
+
+        }
+    }
+}
+
+
+
+.columns{
+    display: flex;
+    width:100%;
+    height: 100px;
+    
+    .menu-column{
+        
+        height: 100vh;
+        background-color: $brown;
+        padding-right: 0;
+        
+
+        .menu-header{
+            width:100%;
+            height: 60px;
+            background-color: rgba($color: #000000, $alpha: .4);
+
+
+            //to make header at the center
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            //font size and stlye
+            h2{
+                font-size: 30px;
+                font-weight: 500;
+                letter-spacing: 2px;
+            }
+            
+        }
+
+        .menu-item{
+            width:100%;
+            height: 50px;
+            border-bottom: solid 1px rgba($color: white, $alpha: 1.0);
+            
+
+             //font size and stlye
+             font-size: 25px;
+             color:darken($color: white, $amount: 20);
+             
+
+             //align
+             display: flex;
+             justify-content: center;
+             align-items: center;
+
+            //animation
+            transition: 
+            box-shadow .2s ease-in-out, 
+            font-size .3s ease-in-out,
+            opacity 1s ease-in-out
+            ;
+
+            &:hover{
+            //to make KANBAN text gradient color.
+            background: linear-gradient(-60deg ,#2af598 50%,#14e7f4 90%);
+
+            //font size color shadow
+            font-size: 28px;
+            box-shadow:1px 1px 10px 1px rgba($color:#14e7f4, $alpha: .6);      
+            color:white;
+            opacity: .8;
+            }
+             
+        }
+       
+    }
+
+}
+
+
+// Common Classes
+.has-gradient{
+    //to make KANBAN text gradient color.
+    background: -webkit-linear-gradient(#14e7f4,#2af598);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
