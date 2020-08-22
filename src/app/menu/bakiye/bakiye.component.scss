@@ -1,0 +1,144 @@
+@import '../../../main-style.scss';
+.input-form{
+    
+    width: 100%; 
+    //display
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button{
+        background: linear-gradient(-45deg,$purple,$light-purple );
+    }
+
+    
+}
+i{
+    margin-left: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    
+    transition:box-shadow .2s ease-out,
+    transform .2s ease-out ;
+
+    &:hover{
+        transform: scale(1.2);
+        //to make KANBAN text gradient color.
+        background: -webkit-linear-gradient(#14e7f4,#2af598);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+           
+        box-shadow:0px 0px 20px 10px rgba($color: #2af598, $alpha: .1);
+    }
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.total-display-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 50px;
+    color: $green;
+
+    width: 250px;
+    height: 150px;
+    border-radius: 5px;
+    margin-top: 10px;
+    
+    box-shadow: 0 0 5px 0 rgba($color: #000000, $alpha: 1.0);
+    background: linear-gradient(-135deg,gray ,$brown );
+}
+
+.table-row{
+    width: 750px;
+    height: auto;   
+    overflow-y: scroll;
+    margin: 10px auto;
+   
+
+    .gelir{
+        background: rgba($color: white, $alpha: 1.0);
+        border-radius: 5px;
+        margin-right: 5px;
+
+        
+    }
+
+    .gider{
+        background: rgba($color: white, $alpha: 1.0);
+        border-radius: 5px;
+    }
+
+    h3{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .bakiye-box{
+        width: 90%;
+        height: 40px;
+        margin-bottom: 10px;
+        background-color:lighten($color: rgba($brown,.3) ,$amount: 70) ;
+        border-radius: 5px;
+        cursor: pointer;
+
+        position: relative;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        transition: box-shadow .2s ease-out,
+        transform .2s ease-out;
+
+        &:hover{
+            box-shadow: 0px 3px 3px 0 rgba($color: #000000, $alpha: .4);
+            transform: scale(1.05);
+
+            .x-icon{
+                opacity:1;
+            }
+
+        }
+
+        .baslik{
+            margin:auto 10px;
+        }
+        .amount{
+            margin:auto 10px;
+        }
+
+        .x-icon{
+            position: absolute;
+            right: -15px;
+            top: -15px;
+            color: white;
+            background-color: $red;
+            opacity: 0;
+            cursor: pointer;
+
+            height: 30px;
+            width: 30px;
+            border-radius: 30%;
+          
+            transition: opacity .2s ease-out,
+            transform .2s ease-out;
+
+            &:hover{
+                transform: scale(1.2);
+            }
+
+            i{
+                transform: translate(58%,18%);
+            }
+        }
+    }  
+    
+}
+

@@ -5,10 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 
+import { BakiyeComponent } from './menu/bakiye/bakiye.component';
+import { DashboardComponent } from './menu/dashboard/dashboard.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent
+    LayoutComponent,
+    BakiyeComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

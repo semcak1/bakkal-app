@@ -10,25 +10,36 @@
 <section>
   <div class="columns">
     <!--MENU COLUMN-->
-    <div class="column is-3 menu-column">
-      <div class="menu-header">
+    <div class="column is-2 menu-column">
+      <a [routerLink]="['/home']"><div class="menu-header">
         <div class=" has-gradient">
           <h2>Menu</h2>
         </div>
-      </div>
+      </div></a>
+
+      <a routerLink="dashboard"><div  class="menu-item">
+        <h3>Dashboard</h3>
+      </div></a>
       
-      <div class="menu-item">
+      
+      <a routerLink="bakiye"><div  class="menu-item">
         <h3>Gelir / Gider</h3>
-      </div>
+      </div></a>
+      
 
       <div class="menu-item">
         <h3>Veresiye Defteri</h3>
       </div>
     
     </div>
+
     <!--BODY COLUMMN-->
-    <div class="column">
-      <h2>gövde</h2>
+    <div class="column body-column">
+     
+      <div class="">
+        <router-outlet></router-outlet>
+      </div>
+     
     </div>
    
   </div>
@@ -37,3 +48,5 @@
 <footer>
   <div class="foot"></div>
 </footer>
+
+

@@ -11,3 +11,11 @@ html{
     background-size: cover;
     overflow-y: auto !important;
 }
+
+// Common Classes
+.has-gradient{
+    //to make KANBAN text gradient color.
+    background: -webkit-linear-gradient(#14e7f4,#2af598);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
