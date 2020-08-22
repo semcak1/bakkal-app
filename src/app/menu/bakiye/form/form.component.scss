@@ -1,0 +1,67 @@
+@import '../../../../main-style.scss';
+.plus{
+    margin-left: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    
+    transition:box-shadow .2s ease-out,
+    transform .2s ease-out ;
+
+    &:hover{
+        transform: scale(1.2);
+        //to make KANBAN text gradient color.
+        background: -webkit-linear-gradient(#14e7f4,#2af598);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+           
+        box-shadow:0px 0px 20px 10px rgba($color: #2af598, $alpha: .1);
+    }
+}
+.input-form{
+    
+    width: 100%; 
+    //display
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button{
+        background: linear-gradient(-45deg,$purple,$light-purple );
+        transition: box-shadow .2s ease-out;
+        
+
+        &:hover{
+            background: linear-gradient(-45deg,#883888,$light-purple );
+            box-shadow: 0 0 10px 0px rgba($color: #883888, $alpha: .7);
+        }
+    }
+
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.total-display-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 50px;
+    color: $green;
+
+    width: 250px;
+    height: 150px;
+    border-radius: 5px;
+    margin-top: 10px;
+    
+    box-shadow: 0 0 5px 0 rgba($color: #000000, $alpha: 1.0);
+    background: linear-gradient(-135deg,gray ,$brown );
+}
+
+select,option{
+    font-weight: 700;
+}
