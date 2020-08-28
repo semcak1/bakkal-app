@@ -1,6 +1,8 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import {NgForm} from '@angular/forms';
 import { BudgetData } from 'src/app/data.model';
+import {MatDialog, MatDialogConfig} from '@angular/material';
+import { AddOptionComponent } from '../add-option/add-option.component';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -12,7 +14,7 @@ export class FormComponent implements OnInit {
 
   @Output() formSubmit : EventEmitter<BudgetData>=new EventEmitter<BudgetData>();
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
   }
@@ -25,4 +27,12 @@ export class FormComponent implements OnInit {
     console.log(form.value)
     form.reset();
   }
+
+ 
+   
+  
+
+  
+
+
 }

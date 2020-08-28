@@ -16,6 +16,7 @@ import { MenuComponent } from './menu/menu.component';
 import { AddOptionComponent } from './menu/bakiye/add-option/add-option.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -31,13 +32,18 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     
     AddOptionComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatDialogModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    
+  ],
+  bootstrap: [AppComponent],
+  entryComponents : [AddOptionComponent],
 })
 export class AppModule { }

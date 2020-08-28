@@ -4,7 +4,14 @@
     <hr>
 
     <!--Budget item card-->
-    <app-budget-item-card [isGelir]="true"></app-budget-item-card>
+    <div *ngFor="let data of budgetItems">
+      <app-budget-item-card
+      [item]="data"  
+      [isGelir]="true"
+      *ngIf="data.amount>=0"
+      ></app-budget-item-card>
+    </div>
+    
 
     
   </div>
@@ -12,8 +19,15 @@
     <h3>Gider</h3>
     <hr>
 <!--Budget item card-->
-    <app-budget-item-card [isGelir]="false"></app-budget-item-card>
+    <div *ngFor="let data of budgetItems" >
+      <app-budget-item-card
+      [item]="data"
+      [isGelir]="false"
+      *ngIf="data.amount<0"
+      ></app-budget-item-card>
 
+    </div>
+   
 
   </div>
 </div>

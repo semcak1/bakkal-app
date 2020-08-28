@@ -1,7 +1,12 @@
-
+<div class="add-variables">
+    <button mat-button-raised (click)="openDialog()">
+      
+    <i  class="plus fas fa-plus-square fa-3x"></i></button>
+    
+  </div>
 <app-form (formSubmit)="addItem($event)" ></app-form>
 
-<app-budget-item-list></app-budget-item-list>
+<app-budget-item-list [budgetItems]="budgetItems" ></app-budget-item-list>
 
 
 

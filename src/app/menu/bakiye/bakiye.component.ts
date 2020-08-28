@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BudgetData } from 'src/app/data.model';
+import { AddOptionComponent } from './add-option/add-option.component';
+import { MatDialog } from '@angular/material';
+import { AllData } from 'src/app/AllData.module';
 
 @Component({
   selector: 'app-bakiye',
@@ -8,15 +11,23 @@ import { BudgetData } from 'src/app/data.model';
 })
 export class BakiyeComponent implements OnInit {
 
-  budgetDatas: BudgetData[]=new Array<BudgetData>();
+ budgetItems: BudgetData[]=new Array<BudgetData>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
+
   addItem(item:BudgetData){
-    this.budgetDatas.push(item);
+    console.log(item)
+    this.budgetItems.push(item);
     
   }
+
+ 
+ 
+    
+   
+
 }
