@@ -1,6 +1,6 @@
 
-export class Data{
+export class BudgetData{
 
-    constructor(private amount: number, private title: string) {}
-    
+    constructor(public amount?: number, public description?: string) {}
+
 }

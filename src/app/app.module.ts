@@ -10,6 +10,12 @@ import { DashboardComponent } from './menu/dashboard/dashboard.component';
 import { FormComponent } from './menu/bakiye/form/form.component';
 import { BudgetItemListComponent } from './menu/bakiye/budget-item-list/budget-item-list.component';
 import { BudgetItemCardComponent } from './menu/bakiye/budget-item-list/budget-item-card/budget-item-card.component';
+import {FormsModule} from '@angular/forms';
+
+import { MenuComponent } from './menu/menu.component';
+import { AddOptionComponent } from './menu/bakiye/add-option/add-option.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -19,11 +25,17 @@ import { BudgetItemCardComponent } from './menu/bakiye/budget-item-list/budget-i
     DashboardComponent,
     FormComponent,
     BudgetItemListComponent,
-    BudgetItemCardComponent
+    BudgetItemCardComponent,
+    
+    MenuComponent,
+    
+    AddOptionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

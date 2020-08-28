@@ -4,3 +4,5 @@
 @import '../node_modules/bulma/bulma.sass';
 @import './main-style.scss';
 @import './background-style.scss'
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
